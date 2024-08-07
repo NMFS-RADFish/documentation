@@ -10,7 +10,7 @@ sidebar_position: 4
 
 USWDS (United States Web Design System) is a web design system that specifies coding patterns, components, and design tokens that outline how government applications should be built while adhering to 508 compliance guidelines.
 
-More specifically, when building applications with React, there is an existing component library, [react-uswds](https://trussworks.github.io/react-uswds/?path=/story/welcome--welcome) that our project extends for the purposes of building any Radfish application. These components maintain all functionality of `react-uswds` components, but are branded with NOAA themes and styles. These components live in `react-radfish` directory, and allow for development in a modern React environment with NOAA look and feel.
+More specifically, when building applications with React, there is an existing component library, [react-uswds](https://trussworks.github.io/react-uswds/?path=/story/welcome--welcome) that our project extends for the purposes of building any RADFish application. These components maintain all functionality of `react-uswds` components, but are branded with NOAA themes and styles. These components live in `react-radfish` directory, and allow for development in a modern React environment with NOAA look and feel.
 
 For reference on the full `react-uswds` library, you can reference the deployed storybook:
 
@@ -56,7 +56,7 @@ Branding refers to the process of creating a distinct identity for a product or 
 You will notice, that the components above do not have any `className` assigned, and you may be wondering how to style that component. To do this, there are a couple of things to keep in mind.
 
 1. Each component in `react-radfish` has it’s own scoped css file, that modifies the existing `@trussworks` css in order to inject NOAA styles. This file should not be touched. If you notice a bug or issue, please see `CONTRIBUTING`
-2. You can modify the general theme of these components in the `styles/theme.css` file. You can change things like color variables, font-family, and line-height here, and they will be propagated throughout the application, as well as throughout `react-radfish` . Radfish utilizes css variables, and can be used like so:
+2. You can modify the general theme of these components in the `styles/theme.css` file. You can change things like color variables, font-family, and line-height here, and they will be propagated throughout the application, as well as throughout `react-radfish` . RADFish utilizes css variables, and can be used like so:
 
 ```css
 // styles/theme.js
@@ -88,7 +88,7 @@ By following this method, you can leverage the underlying `uswds` component, mai
 
 As NOAA is a governmental agency, Section 508 compliance is crucial for the development of frontend apps because it ensures that these applications are accessible to all users, including those with disabilities. NOAA provides vital information related to weather, oceans, and atmospheric conditions, and it is imperative that individuals with diverse abilities can access and utilize these resources.
 
-508 compliance has been a driving factor for many decisions we make in Radfish, from extending a compliant component library in `@trussworks/react-uswds` to our UX strategies.
+508 compliance has been a driving factor for many decisions we make in RADFish, from extending a compliant component library in `@trussworks/react-uswds` to our UX strategies.
 
 **Resources:**
 Read more about 508 compliance here: [https://www.section508.gov/](https://www.section508.gov/)

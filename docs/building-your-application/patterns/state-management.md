@@ -83,7 +83,7 @@ At a high level, we handle state management for tables in a similar way, althoug
 
 By doing this, `DemoTable` can now utilize the `useTableState` hook, that provides the component with all of the state, event handlers, sorting functionality, as well as other pieces of functionality that may be needed for the application’s needs.
 
-More specifically, Radfish leverages a React Library called [Tanstack Table](https://tanstack.com/table/latest/docs/framework/react/react-table) which makes it simple to handle traditionally tricky table interactions like sorting, filtering, and data fetching. Tanstack Table manages a lot of the heavy lifting with regards to re-rendering, and provides an easy to use interface to make static tables dynamic and interactive.
+More specifically, RADFish leverages a React Library called [Tanstack Table](https://tanstack.com/table/latest/docs/framework/react/react-table) which makes it simple to handle traditionally tricky table interactions like sorting, filtering, and data fetching. Tanstack Table manages a lot of the heavy lifting with regards to re-rendering, and provides an easy to use interface to make static tables dynamic and interactive.
 
 We suggest looking closely at the official Tanstack Table documentation to get familiar with how the library works. But, in the context of the boilerplate repo, we’ve provided a simple interface in `TableWrapper` that leverages the `useReactTable` hook.
 
@@ -128,7 +128,7 @@ PWAs leverage service workers, which are scripts that run in the background inde
 
 **See more about service workers [here](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)**
 
-Service workers are integrated into the Radfish application by default. After scaffolding the application you will notice the following files:
+Service workers are integrated into the RADFish application by default. After scaffolding the application you will notice the following files:
 
 `service-worker.js`
 
@@ -145,7 +145,7 @@ serviceWorkerRegistration.register();
 
 This will register the React application as a PWA, which can be downloaded from the browser. For more information on how to download the PWA onto your device, see [this blog article](https://aureatelabs.com/blog/install-pwa-to-device/)
 
-Additionally, you can query for whether or not the Radfish application is online or offline by leveraging the [navigator API](https://developer.mozilla.org/en-US/docs/Web/API/Navigator)
+Additionally, you can query for whether or not the RADFish application is online or offline by leveraging the [navigator API](https://developer.mozilla.org/en-US/docs/Web/API/Navigator)
 
 > Note, that this service worker is preconfigured when using the boilerplate `react-javascript` template
 

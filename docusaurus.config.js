@@ -8,7 +8,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Radfish Documentation",
+  title: "RADFish Documentation",
   tagline: "Frontend Development Tooling for NOAA Developers",
   favicon: "img/favicon.ico",
 
@@ -53,7 +53,7 @@ const config = {
     ({
       image: "img/radfish-logo.png",
       navbar: {
-        title: "RADfish Docs",
+        title: "RADFish Docs",
         logo: {
           alt: "RADFish Logo",
           src: "img/radfish-logo.png",

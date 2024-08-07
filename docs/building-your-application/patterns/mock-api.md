@@ -4,9 +4,9 @@ sidebar_position: 4
 
 # Mock API
 
-As a frontend developer, it can sometimes be a blocker when you are developing a feature that has a dependency on an external API. Often times, you can be waiting for a backend developer to finish building our their API endpoints before you can continue building your feature. RadfishApp ships with a built-in mock server that allows the frontend developer to “stub out” and mock API requests/responses without this hard dependency during development.
+As a frontend developer, it can sometimes be a blocker when you are developing a feature that has a dependency on an external API. Often times, you can be waiting for a backend developer to finish building our their API endpoints before you can continue building your feature. RADFishApp ships with a built-in mock server that allows the frontend developer to “stub out” and mock API requests/responses without this hard dependency during development.
 
-More specifically, RadfishApp ships with [mock service worker](https://mswjs.io/) and is preconfigured in the boilerplate application.
+More specifically, RADFishApp ships with [mock service worker](https://mswjs.io/) and is preconfigured in the boilerplate application.
 
 At the entrypoint of the React application, we enable API mocking with the `enableMocking` function:
 

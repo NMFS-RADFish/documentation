@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Integrating with Backend Services
 
-The **`RadfishAPIService`** is a class designed to facilitate interactions with a backend API. It simplifies making HTTP requests (GET, POST, PUT, DELETE) by encapsulating them into easy-to-use class methods. This service handles the construction of requests, including headers and query parameters, and processes responses.
+The **`RADFishAPIService`** is a class designed to facilitate interactions with a backend API. It simplifies making HTTP requests (GET, POST, PUT, DELETE) by encapsulating them into easy-to-use class methods. This service handles the construction of requests, including headers and query parameters, and processes responses.
 
 ### **Features**
 
@@ -23,12 +23,12 @@ The **`RadfishAPIService`** is a class designed to facilitate interactions with 
 
 **Initializing the Service**
 
-To use **`RadfishAPIService`**, instantiate it with an access token:
+To use **`RADFishAPIService`**, instantiate it with an access token:
 
 ```jsx
-import RadfishAPIService from "./RadfishAPIService";
+import RADFishAPIService from "./RADFishAPIService";
 
-const ApiService = new RadfishAPIService("your_access_token_here");
+const ApiService = new RADFishAPIService("your_access_token_here");
 ```
 
 **Making API Requests**
@@ -99,10 +99,10 @@ Responses and errors from the API are returned as promises.
 
 ### **Additional Information**
 
-- The **`processQueryParameters`** and **`setHeaders`** functions are utility functions used internally by **`RadfishAPIService`** to process query parameters and set request headers, respectively.
-- Ensure that the access token provided to **`RadfishAPIService`** is valid and has the necessary permissions for the requests being made.
+- The **`processQueryParameters`** and **`setHeaders`** functions are utility functions used internally by **`RADFishAPIService`** to process query parameters and set request headers, respectively.
+- Ensure that the access token provided to **`RADFishAPIService`** is valid and has the necessary permissions for the requests being made.
 
-By using **`RadfishAPIService`**, developers can streamline API interactions, making their code more readable and maintainable while handling various aspects of HTTP communication in a centralized manner.
+By using **`RADFishAPIService`**, developers can streamline API interactions, making their code more readable and maintainable while handling various aspects of HTTP communication in a centralized manner.
 
 ---
 
