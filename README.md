@@ -29,3 +29,7 @@ This command generates static content into the `build` directory and can be serv
 ### Deployment
 
 To deploy changes, simply push a feature branch to this repository. Once it has been approved/merged, our automated workflow will deploy the changes for you.
+
+# Contributing
+
+Thank you for considering contributing to this project! Contributions of all kinds are welcome, whether it’s bug reporting, feature requests, improving documentation, or submitting code. Before you get started, please take a moment to read through our [contribution guidelines](https://nmfs-radfish.github.io/radfish/about/contribute).
