@@ -4,9 +4,9 @@ sidebar_position: 1
 
 # Getting Started
 
-Create RadFish App is an officially supported way to create single-page React applications. It offers a modern build setup with no configuration.
+Create RADFish App is the officially supported tool for creating single-page React applications. It offers a modern build setup with no configuration.
 
-### Prerequisites
+## Prerequisites
 
 Before you start, make sure you have the following installed:
 
@@ -14,97 +14,96 @@ Before you start, make sure you have the following installed:
 - [x] npm (v10.8.2 or later)
 - [x] git (v2.0 or later)
 
-# Quick Start
+## Quick Start
 
-**Option 1:** To scaffold an app, run the commands:
+### Option 1: Scaffold a new app from a template
+
+Start your app with a barebones and pre-configured [template](./examples-and-templates#templates).
 
 ```bash
 npx @nmfs-radfish/create-radfish-app my-app
 cd my-app
 npm start
 ```
-Then open [http://localhost:3000/](http://localhost:3000/) to see your app.
 
-### Output
+Once the development server starts, visit http://localhost:3000/ in your browser to see your app.
 
-```bash
-my-app
-├── babel.config.js
-├── index.html
-├── mocks
-│   ├── browser.js
-│   └── handlers.js
-├── node_modules/
-├── package-lock.json
-├── package.json
-├── public
-│   ├── icons
-│   ├── manifest.json
-│   ├── mockServiceWorker.js
-│   ├── noaafavicon.png
-│   └── robots.txt
-├── src
-│   ├── App.jsx
-│   ├── index.css
-│   ├── index.jsx
-│   ├── pages
-│   ├── service-worker.js
-│   └── styles
-└── vite.config.js
-```
+### Option 2: Scaffold a new app from an example
 
-**Option 2:** If you would like to scaffold from 1 example, please see [Running an Example](./building-your-application/available-scripts/running-example.md). The list of examples can be found at [Examples and Templates](/radfish/developer-documentation/examples-and-templates)
-
-**Option 3:** You can also clone the [boilerplate repo](https://github.com/NMFS-RADFish/boilerplate) to get all the examples.
-
-Then:
+Select an [example](/radfish/developer-documentation/examples-and-templates) and run  [the command](./building-your-application/available-scripts/running-example.md) using the `--example` tag. 
 
 ```bash
-cd boilerplate/examples/[example you want to run]
-npm i
+npx @nmfs-radfish/create-radfish-app my-app --example multistep-form
+cd my-app
 npm start
 ```
 
-**To show help:**
+### Option 3: Clone the boilerplate repository to access all examples
+
+To get all the examples, clone the [boilerplate repository](https://github.com/NMFS-RADFish/boilerplate):
+
+```bash
+git clone https://github.com/NMFS-RADFish/boilerplate.git
+```
+
+Then navigate to the example you want to run and start the app:
+
+```bash
+cd boilerplate/examples/[example you want to run]
+npm install
+npm start
+```
+
+Once the development server starts, visit http://localhost:3000/ in your browser to see your app.
+
+### Using the help flag
+
+The `--help` flag is a common option that displays helpful information about a command or script, including available options and usage instructions.
 
 ```bash
 npx @nmfs-radfish/create-radfish-app --help
 ```
 
-## Folder Structure Explanation
-
-### `node_modules/`
-
-This directory contains all the project's dependencies installed via npm. It's automatically generated when you run `npm install`. You should not manually modify this folder, as it's managed by npm.
-
-### `public/`
-
-The `public` folder contains static assets that will be served directly to the browser. These files are not processed by Webpack. Common files in this folder include the main `index.html` file, favicon, and other public resources like images and manifest files.
-
-- **`index.html`**: The main HTML file that serves as the entry point for your React application.
-- **`favicon.ico`**: The small icon that appears in the browser tab next to the title of the page.
-- **`manifest.json`**: Provides metadata about the web application, useful for Progressive Web Apps (PWAs).
-
-### `src/`
-
-The `src` folder is where all the source code for your React application resides. This is where you will spend most of your development time.
-
-- **`App.js`**: The main component of your React application, typically serving as the entry point for your app's component hierarchy.
-- **`components/`**: This folder contains reusable React components that can be used throughout the application.
-- **`assets/`**: A directory for storing images, fonts, and other static media assets used in the application.
-
 # Scripts
 
-## `npm start`
+**`npm start`**
 
-Quickly runs the project for development mode. This will automatically update the application, and help enforce coding best practices at development time.
+This script starts the Vite development server. It runs the app locally with hot module reloading, allowing for fast development and instant updates as you make changes.
 
-## `npm test`
+**`npm run build`**
 
-Runs any configured application test code.
+Builds the project for production by using Vite’s build tool. It generates optimized static assets, such as HTML, CSS, and JavaScript, which are output to the dist directory.
 
-## `npm run build`
+**`npm run prebuild`**
 
-Prepares a build
+Before the build process starts, this script ensures that the dist folder (which contains the previous build) is deleted. This helps prevent old build files from being included in the new build.
+
+**`npm test`**
+
+Runs unit and integration tests using Vitest, while excluding end-to-end (e2e) tests located in the `./src/__tests__/e2e/` directory. It ensures that regular tests are executed separately from e2e tests.
+
+**`npm test:e2e`**
+
+Runs end-to-end (e2e) tests located in `./src/__tests__/e2e/integration.e2e.test.jsx`. This script uses concurrently to run the Vite server and e2e tests in parallel, automatically stopping other processes if one succeeds.
+
+**`npm run lint`**
+
+Runs ESLint with the `--fix` option, which automatically fixes certain linting issues in the code found in the src/ directory.
+
+**`npm run format`**
+
+Formats the code in the `src/` directory using Prettier according to the configuration specified in the `.prettierrc` file. This ensures consistent code formatting across the project.
+
+**`npm run serve`**
+
+This script starts a local server to preview the production build. It serves the files from the `dist/` folder, allowing you to check how the app will behave in a production environment.
+
+**`npm run lhci:mobile`**
+
+Runs **Lighthouse CI (LHCI)** on the application, collecting performance metrics and scores for mobile devices. It automates performance auditing to ensure the app meets mobile optimization standards.
+
+**`npm run lhci:desktop`**
+
+Runs **Lighthouse CI (LHCI)** on the application, collecting performance metrics and scores for desktop devices. This script is similar to lhci:mobile but targets desktop performance.
 
 Now that you are up and running, see the [Components & Usage](./building-your-application/patterns/components.md) section to start building out your first pages!
