@@ -2,7 +2,6 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-
 import Heading from "@theme/Heading";
 import styles from "./index.module.css";
 
@@ -19,9 +18,12 @@ function HomepageHeader() {
         >
           {siteConfig.title}
         </Heading>
-        <p className={clsx(styles.heroSubHeading, styles.heroTextColor)}>
+        <Heading
+          as="h2"
+          className={clsx(styles.heroSubHeading, styles.heroTextColor)}
+        >
           {siteConfig.tagline}
-        </p>
+        </Heading>
         <div className={clsx("buttons", styles.heroButtons)}>
           <Link
             className={clsx("button button--primary", styles.heroButton)}

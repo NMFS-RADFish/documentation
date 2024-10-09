@@ -1,3 +1,4 @@
+import Heading from "@theme/Heading";
 import clsx from "clsx";
 import styles from "./styles.module.css";
 
@@ -7,10 +8,10 @@ function RADFishHero() {
       <div className="container">
         <div className="row">
           <div className={clsx("col col--12 padding-horiz--md")}>
-            <h3 className={styles.heroTitle}>
+            <Heading as="h3" className={styles.heroTitle}>
               Introducing the React Application Development Framework for
               Fisheries (RADFish)
-            </h3>
+            </Heading>
             <p className={styles.heroSubtitle}>
               RADFish, developed by NOAA Fisheries and its partners, is a
               React.js framework designed to streamline the creation and
@@ -74,7 +75,7 @@ function Feature({ title, description }) {
       {/* Card container */}
       <div className={styles.card}>
         <div className="card__header">
-          <h3>{title}</h3>
+          <Heading as="h3">{title}</Heading>
         </div>
         <div className="card__body">
           <p>{description}</p>

@@ -25,14 +25,8 @@
 .heroSubtitle {
   font-size: 1rem;
   font-weight: 300;
-  color: #333;
+  color: var(--radfish-gray-darker);
   margin-bottom: 20px;
-}
-
-.heroDescription {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #666;
 }
 
 .cardContainerRow {
@@ -40,7 +34,7 @@
 }
 
 .card {
-  border: 1px solid #ddd;
+  border: 1px solid var(--radfish-gray-light);
   border-radius: 8px;
   background-color: white;
   padding: 20px;
@@ -66,7 +60,7 @@
 
 .card__body {
   font-size: 1.1rem;
-  color: #666;
+  color: var(--radfish-gray-dark);
   flex-grow: 1;
   overflow: hidden;
   text-overflow: ellipsis;

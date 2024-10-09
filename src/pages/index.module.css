@@ -48,7 +48,7 @@
 }
 
 [data-theme="dark"] .heroButton {
-  background-color: #205493;
+  background-color: var(--radfish-primary-blue);
   color: white;
 }
 

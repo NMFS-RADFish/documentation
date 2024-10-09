@@ -7,6 +7,9 @@
 /* You can override the default Infima variables here. */
 :root {
   --radfish-primary-blue: #205493;
+  --radfish-gray-dark: #666;
+  --radfish-gray-darker: #333;
+  --radfish-gray-light: #ddd;
 
   --ifm-color-primary: #205493;
   --ifm-color-primary-dark: #1d4c84;
@@ -36,7 +39,6 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-
 .buttons {
   display: flex;
   align-items: center;
@@ -59,17 +61,17 @@
 }
 
 .button--primary:hover {
-    background-color: var(--ifm-color-primary-light);
+  background-color: var(--ifm-color-primary-light);
 }
 
 .button--secondary {
   background-color: var(--ifm-color-secondary);
-  color: #205493;
+  color: var(--radfish-primary-blue);
   padding: 1rem 2rem;
   text-decoration: none;
   font-size: 16px;
 }
 
 .button--secondary:hover {
-    background-color: var(--ifm-color-secondary-light);
+  background-color: var(--ifm-color-secondary-light);
 }
