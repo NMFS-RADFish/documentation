@@ -51,7 +51,7 @@ app.off("storage:pressure", handler)
 
 :::note The init snapshot is lightweight
 
-The snapshot taken automatically at startup (`app.storageEstimate`) is **browser-only** — `logsBytes`, `stores`, `storesBytes`, and `radfishBytes` are `null`. Measuring per-subsystem bytes reads every record, so RADFish skips it at init to avoid delaying startup on a large persisted Store. Call **`await app.getStorageEstimate()`** to get those numbers (that's what populates them). If you ever want a browser-only read on purpose, pass `getStorageEstimate({ measureSubsystems: false })`.
+The snapshot taken automatically at startup (`app.storageEstimate`) is **browser-only** — `logsBytes`, `stores`, `storesBytes`, and `radfishBytes` are `null`. Measuring per-subsystem bytes reads every record, so RADFish skips it at init to avoid delaying startup on a large persisted Store. Call **`await app.getStorageEstimate()`** to get those numbers (that's what populates them).
 
 :::
 
