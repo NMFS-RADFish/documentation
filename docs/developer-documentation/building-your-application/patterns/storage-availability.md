@@ -110,7 +110,10 @@ function StorageMeter() {
   if (!estimate?.supported) return <p>Storage info unavailable on this browser.</p>;
   return (
     <p>
-      {Math.round(estimate.percentUsed * 100)}% used —{" "}
+      {estimate.percentUsed != null
+        ? `${Math.round(estimate.percentUsed * 100)}% used`
+        : "usage unknown"}{" "}
+      —{" "}
       {estimate.persisted ? "protected" : "not protected"}
     </p>
   );
@@ -172,7 +175,7 @@ WebKit deletes **all** of a site's script-writable storage (IndexedDB, Cache, Lo
 
 > "Web applications added to the home screen are not part of Safari and thus have their own counter of days of use. Their days of use will match actual use of the web application which resets the timer." — [WebKit Blog](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/)
 
-For an offline field app used intermittently, this means unsynced data in a **Safari tab can vanish in a week** — so **nudge users to Add to Home Screen** (which also gets `persist()` granted on Chrome/Safari), and always keep a server sync backstop.
+For an offline field app used intermittently, this means unsynced data in a **Safari tab can vanish in a week** — so **nudge users to Add to Home Screen** (which also makes a `persist()` grant far more likely on Chrome/Safari), and always keep a server sync backstop.
 
 ### Always keep a server backstop
 
